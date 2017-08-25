@@ -15,7 +15,7 @@
 
 # Tasks
 
-## Install Package
+## install package
 
 * RPM
     * rpm -i $pkg
@@ -25,54 +25,60 @@
     * dpkg $pkg
     * apt-get install $pkg
 
-## Update Package
+## update package
 
-rpm -u
-yum update
+* rpm -u
+* yum update
 
-## Uninstall Package
+## uninstall package
 
-rpm -e
-yum erase
+* rpm -e
+* yum erase
 
-## Basic Package Query
+## basic package query
 
-rpm -q $pkg
+* rpm -q $pkg
 
-## Show Package Information
+## show package information
 
-rpm -qi $pkg
-yum info $pkg
+* rpm -qi $pkg
+* yum info $pkg
 
 
-## List All Installed Packages
+## list all installed packages
 
-rpm -qa
+* rpm -qa
 
-## What Package Owns File
+## what package owns file
 
-rpm -qf
+* rpm -qf
 
-rpm ‐qc packagename
-package config files
+## show package config files 
 
-rpm ‐ql packagename
-all files from package
+* rpm ‐qc packagename
 
-yum check‐updates
-list available updates
+# show all files from package
 
-yum provides $thing
-lists all packages that provide $thing.  could be a file, a package name, or a capability
+* rpm ‐ql packagename
 
-yum clean all
-clears all yum caches
+# list available updates
 
-# Package signing
+* yum check‐updates
 
-RPMs are signed with GPG keys
-Repositories usually place their keys in /etc/pki/rpm‐gpg.
-Yum will bug you to accept a key if you haven't already imported it into the RPM keyring.
+# lists all packages that provide $thing.  could be a file, a package name, or a capability
 
-rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+* yum provides $thing
 
+# clears all yum caches (except for disabled/removed repos)
+
+* yum clean all
+
+# package signing
+
+* RPMs are signed with GPG keys
+* Repositories usually place their keys in /etc/pki/rpm‐gpg.
+* Yum will bug you to accept a key if you haven't already imported it into the RPM keyring.
+
+# package signing keys
+
+* rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
