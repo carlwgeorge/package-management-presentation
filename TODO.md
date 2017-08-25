@@ -82,3 +82,11 @@
 # package signing keys
 
 * rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+
+
+# version strings
+
+* NEVRA - name, epoch, version, release, arch
+* semantic
+
+# shared libraires versus bundled libraries
